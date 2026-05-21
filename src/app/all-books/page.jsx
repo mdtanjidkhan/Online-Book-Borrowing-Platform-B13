@@ -58,7 +58,7 @@ export default function AllBooksPage() {
             ))}
           </div>
         ) : (
-          <p className="text-gray-500 text-center py-10"> </p>
+          <p className="text-gray-500 text-center py-10"> No Books Found..</p>
         )}
       </div>
 
