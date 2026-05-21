@@ -1,10 +1,13 @@
 'use client'
+import { authClient, useSession } from "@/lib/auth-client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 
 const Navbar = () => {
    
+  const { data: session, isPending } = authClient.useSession();
+   const user = session?.user;
   const pathname = usePathname()
 
     return (
@@ -32,7 +35,11 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end mx-2">
-    <Link className="btn" href={"/login"}>Login</Link>
+     {isPending ? "loading..." : session ? (<div>
+       <h2>Hello, {session?.user?.name}</h2>
+        <button onClick={async()=> await authClient.signOut()} className="btn bg-purple-500">LogOut</button>
+     </div>) :(<Link className="btn bg-purple-600" href={"/login"}>Login</Link>)}
+    
   </div>
 </div>
     );

@@ -1,4 +1,6 @@
-[
+import React from 'react';
+
+const books = [
   {
     "id": 1,
     "title": "The Silent Forest",
@@ -108,3 +110,57 @@
     "image_url": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=600&q=80"
   }
 ]
+
+
+const AllBookDetailsPage = async ({params}) => {
+    
+     const {allBookId} = await params;
+    const book = books.find(b=> b.id === parseInt(allBookId));
+     console.log(book,"all books liv")
+    return (
+        <div className="max-w-5xl mx-auto px-6 py-16">
+      <div className="bg-white dark:bg-gray-800 rounded-3xl p-6 md:p-10 shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col md:flex-row gap-12 items-center md:items-start">
+        
+        {/* Left Side: Large Book Cover */}
+        <div className="w-full md:w-2/5 aspect-[3/4] rounded-2xl overflow-hidden shadow-xl border border-gray-100 dark:border-gray-700">
+          <img src={book.image_url} alt={book.title} className="w-full h-full object-cover" />
+        </div>
+
+        {/* Right Side: Text & Details */}
+        <div className="flex-1 space-y-6">
+          <div className="space-y-2">
+            <span className="text-xs font-bold text-indigo-600 bg-indigo-50 dark:bg-indigo-950/40 px-3 py-1 rounded-md uppercase tracking-wider">
+              {book.category}
+            </span>
+            <h1 className="text-3xl md:text-4xl font-extrabold text-gray-950 dark:text-white leading-tight">{book.title}</h1>
+            <p className="text-sm font-medium text-gray-500 dark:text-gray-400">By <span className="text-gray-800 dark:text-gray-200 font-semibold">{book.author}</span></p>
+          </div>
+
+          <div className="space-y-2">
+            <h3 className="font-bold text-gray-900 dark:text-white">Description</h3>
+            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{book.description}</p>
+          </div>
+
+          {/* Available Quantity */}
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-400 text-xs font-bold">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            {book.available_quantity} copies left
+          </div>
+          {/* button */}
+             <div>
+                <button 
+      // onClick={handleBorrowClick}
+      className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-6 py-3 rounded-xl"
+    >
+      📘 Borrow This Book
+    </button>
+             </div>
+
+
+          </div>
+          </div>
+          </div>
+    );
+};
+
+export default AllBookDetailsPage;
