@@ -45,7 +45,7 @@ export default function AllBooksPage() {
             placeholder="Search books by title..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)} 
-            className="w-full p-3 border border-gray-350 rounded-xl shadow-sm focus:outline-none focus:ring-2 "
+            className="w-full p-3 border border-gray-350 rounded-xl shadow-sm focus:outline-none "
           />
         </div>
         <h2 className="text-xl font-semibold text-gray-800">
