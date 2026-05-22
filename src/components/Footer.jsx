@@ -30,7 +30,7 @@ const Footer = () => {
               <FaGithub size={20} />
             </a>
             {/* */}
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-800 hover:bg-blue-500 hover:text-white rounded-xl transition-all duration-300">
+            <a href="" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-800 hover:bg-blue-500 hover:text-white rounded-xl transition-all duration-300">
               <FaLinkedinIn size={20} />
             </a>
           </div>
