@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { FaFacebook, FaGithub, FaLinkedinIn, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 import { GiEvilBook } from 'react-icons/gi';
 import { MdLocationOn } from 'react-icons/md';
