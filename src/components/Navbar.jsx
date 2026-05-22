@@ -1,7 +1,9 @@
 'use client'
 import { authClient, useSession } from "@/lib/auth-client";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 
 
 const Navbar = () => {
@@ -22,16 +24,18 @@ const Navbar = () => {
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
          <li><Link href={'/'} className={pathname=== "/" ? "text-blue-600":""}>Home</Link></li>
       <li><Link href={'/all-books'} className={pathname=== "/all-books" ? "text-blue-600":""}>All Books</Link></li>
-      <li><Link href={''}>My Profile</Link></li>
+      <li><Link href={'/profile'}>My Profile</Link></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+     <Link href={"/"}>
+       <img className="w-15 h-15" src="https://i.ibb.co.com/8LwhqY3W/logo-book.png" alt="book.logo" />
+     </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       <li className="font-bold"><Link href={'/'} className={pathname=== "/" ? "text-blue-600":""}>Home</Link></li>
       <li className="font-bold"><Link href={'/all-books'} className={pathname=== "/all-books" ? "text-blue-600":""}>All Books</Link></li>
-      <li className="font-bold"><Link href={''}>My Profile</Link></li>
+      <li className="font-bold"><Link href={'/profile'}>My Profile</Link></li>
     </ul>
   </div>
   <div className="navbar-end mx-2">

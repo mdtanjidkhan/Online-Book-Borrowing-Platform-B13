@@ -16,7 +16,7 @@ const AllBookCard = ({ book }) => {
         <h4 className="text-lg font-bold text-gray-900 mt-2">{book.title}</h4>
       </div>
      <Link href={`/all-books/${book.id}`}> <button className="mt-4 w-full bg-gray-900 text-white py-2 rounded-lg text-sm hover:bg-gray-800">
-        Details
+      Books Details
       </button></Link>
     </div>
   );

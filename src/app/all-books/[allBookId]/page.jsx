@@ -152,7 +152,7 @@ const AllBookDetailsPage = async ({params}) => {
       // onClick={handleBorrowClick}
       className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-6 py-3 rounded-xl"
     >
-      📘 Borrow This Book
+     Borrow This Book
     </button>
              </div>
 

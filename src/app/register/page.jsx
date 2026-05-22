@@ -2,6 +2,7 @@
 import { authClient } from '@/lib/auth-client';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import toast, { ToastBar } from 'react-hot-toast';
 
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
@@ -22,19 +23,20 @@ const RegisterPage = () => {
     email: email, // required
     password: password, // required
     image: photo,
-    callbackURL: "/login",
+    callbackURL:"/login"
        })
+    
        console.log(res, error);
        if(error){
-        alert(error.message);
+        toast.error(error.message);
        }
        if(res){
-        alert('Signup successful');
+        toast.success('Signup successful');
        }
     };
    
     return (
-        <div className='w-11/12 mx-auto min-h-[85vh] flex justify-center items-center bg-gray-400'>
+        <div className='w-11/12 mx-auto min-h-[85vh] flex justify-center items-center bg-gray-200'>
             <div className='p-6 rounded-md bg-white mb-10'>
                 <h2 className='font-bold text-2xl text-center'>Register your account</h2>
                 <hr className='mt-4 text-gray-400' />

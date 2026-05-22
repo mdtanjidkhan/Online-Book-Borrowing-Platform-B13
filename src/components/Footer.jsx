@@ -22,11 +22,11 @@ const Footer = () => {
           <p className="text-sm text-gray-400">Connect with us on our official handles:</p>
           <div className="flex space-x-4">
             {/* */}
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-800 hover:bg-blue-600 hover:text-white rounded-xl transition-all duration-300">
+            <a href="https://web.facebook.com/home.php" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-800 hover:bg-blue-600 hover:text-white rounded-xl transition-all duration-300">
               <FaFacebook size={20} />
             </a>
             {/* */}
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-800 hover:bg-gray-700 hover:text-white rounded-xl transition-all duration-300">
+            <a href="https://github.com/mdtanjidkhan" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-800 hover:bg-gray-700 hover:text-white rounded-xl transition-all duration-300">
               <FaGithub size={20} />
             </a>
             {/* */}
@@ -43,12 +43,12 @@ const Footer = () => {
             {/*  */}
             <li className="flex items-center space-x-3">
               <FaEnvelope size={16} className="text-indigo-400" />
-              <span>info@kinkeeper.com</span>
+              <span>tanjidkhan.dev@gmail.com</span>
             </li>
             {/* */}
             <li className="flex items-center space-x-3">
               <FaPhoneAlt size={14} className="text-indigo-400" />
-              <span>+880 1700-000000</span>
+              <span>+880 1831562894</span>
             </li>
             {/* */}
             <li className="flex items-center space-x-3">
