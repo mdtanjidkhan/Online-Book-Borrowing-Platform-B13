@@ -17,7 +17,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3">
           <h3 className="text-lg font-semibold text-white">Follow Us</h3>
           <p className="text-sm text-gray-400">Connect with us on our official handles:</p>
           <div className="flex space-x-4">
