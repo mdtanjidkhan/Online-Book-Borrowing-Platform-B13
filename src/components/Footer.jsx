@@ -10,7 +10,7 @@ const Footer = () => {
         
         <div className="space-y-4">
           <h3 className="text-xl font-bold text-white tracking-wide">
-            <GiEvilBook></GiEvilBook> KinKeeper Library
+            <GiEvilBook></GiEvilBook> Online Book Library
           </h3>
           <p className="text-sm text-gray-400 leading-relaxed">
             Your ultimate companion for tracking, borrowing, and exploring a vast world of books. Manage your reading status seamlessly!
@@ -62,7 +62,7 @@ const Footer = () => {
 
     {/*  */}
       <div className="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-gray-800 text-center text-xs text-gray-500">
-        <p>&copy; {new Date().getFullYear()} KinKeeper. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Online Book Platform. All rights reserved.</p>
       </div>
     </footer>
   );

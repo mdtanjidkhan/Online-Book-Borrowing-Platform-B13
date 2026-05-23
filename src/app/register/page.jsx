@@ -28,10 +28,11 @@ const RegisterPage = () => {
     
        console.log(res, error);
        if(error){
-        toast.error(error.message);
+       const errorMassage = error.message || "Registration failed. Please check your details and try again.";
+        toast.error(errorMassage);
        }
        if(res){
-        toast.success('Signup successful');
+        toast.success("Account created successfully! Welcome aboard!");
        }
     };
    

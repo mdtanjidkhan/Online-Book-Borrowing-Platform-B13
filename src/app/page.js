@@ -1,4 +1,5 @@
 import Banar from "@/components/homepage/Banar";
+import FAQ from "@/components/homepage/FAQ";
 import FeatureBooks from "@/components/homepage/FeatureBooks";
 import MarqueeText from "@/components/homepage/MarqueeText";
 import Testimonials from "@/components/homepage/testimonials/Testimonials";
@@ -12,6 +13,7 @@ const Home = () => {
         <Banar></Banar>
         <FeatureBooks></FeatureBooks>
         <MarqueeText></MarqueeText>
+          <FAQ></FAQ>
          <Testimonials></Testimonials>
     </div>
   );

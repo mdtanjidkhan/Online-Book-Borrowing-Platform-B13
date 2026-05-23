@@ -28,6 +28,13 @@ const LoginPage = () => {
     callbackURL: "/",
 });
    console.log(res, error);
+    if(error){
+         const errorMag = error.message || "Invalid email or password. Please try again."
+         toast.error(errorMag);
+    }
+    if(res){
+        toast.success("Welcome back! Login successful.");
+    }
   }  
 //   social provider with Google
   const handlegoogle = async ()=>{
